@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Yabies::Application.load_tasks
+Loveleeboutique::Application.load_tasks
