@@ -11,3 +11,10 @@ test:
   pool: 5
   database: loveleeboutique_test
   username: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: loveleeboutique
+  username: postgres
