@@ -2,12 +2,12 @@ development:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: yabies_development
+  database: loveleeboutique_development
   username: postgres
 
 test:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: yabies_test
+  database: loveleeboutique_test
   username: postgres
