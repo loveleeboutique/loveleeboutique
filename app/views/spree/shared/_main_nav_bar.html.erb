@@ -1,0 +1,8 @@
+<nav class="columns alpha omega sixteen">
+  <ul id="main-nav-bar" class="inline" data-hook>
+    <li id="home-link" data-hook><%= link_to t(:home), root_path %></li>
+    <% Spree::Taxon.roots.each do |taxon| %>
+       <li><%=  taxon.name %></li>
+    <% end %>
+  </ul>
+</nav>

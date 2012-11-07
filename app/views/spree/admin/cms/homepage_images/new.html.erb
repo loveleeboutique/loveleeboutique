@@ -1,0 +1,26 @@
+<%= form_for @homepage_image, :url => spree.admin_cms_homepage_images_path, :html => { :multipart => true } do |f| %>
+  <% if @homepage_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@homepage_image.errors.count, "error") %> prohibited this homepage_image from being saved:</h2>
+
+      <ul>
+      <% @homepage_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= @homepage_image.description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

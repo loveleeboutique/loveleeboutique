@@ -1,0 +1,52 @@
+<%= form_for @homepage_image, :url => spree.admin_cms_homepage_image_path(@homepage_image), :method => "PUT", :html => { :multipart => true } do |f| %>
+  <% if @homepage_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@homepage_image.errors.count, "error") %> prohibited this homepage_image from being saved:</h2>
+
+      <ul>
+      <% @homepage_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br/>
+  <div class="field">
+    <h3><%= @homepage_image.description %></h3>
+  </div>
+<br/>
+  <% if @homepage_image.image? %>
+  	<%= image_tag @homepage_image.image(:default) %>
+  <% end %>
+
+    <div class="field">
+    <h3>Image</h3>
+    <%= f.file_field :image %>
+  </div>
+<br/>
+  <div>
+    <h3>Link</h3>
+    <%= f.text_field :link_url %>
+  </div>
+<br/>
+  <div>
+    <h3>Link is a popup?</h3>
+    <%= f.check_box :popup_link %>
+  </div>
+<br/>
+  <div>
+    <h3>Popup Width</h3>
+    <%= f.text_field :popup_width %>
+  </div>
+<br/>
+  <div>
+    <h3>Popup Height</h3>
+    <%= f.text_field :popup_height %>
+  </div>
+<br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Back", spree.admin_cms_homepage_images_path %>

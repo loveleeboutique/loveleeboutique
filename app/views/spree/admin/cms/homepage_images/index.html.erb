@@ -1,0 +1,28 @@
+<%= render :partial => 'spree/admin/shared/cms_sub_menu' %>
+<h1>Manage Home Page</h1>
+
+<% @homepage_images.each_with_index do |image, index| %>
+	<div>
+		<%= index + 1 %>. )
+	<%= image.description %>
+
+	<% if image.image? %>
+
+	<%= image_tag image.image(:thumb) %>
+
+	<% end %>
+
+	<%= link_to "Edit", spree.edit_admin_cms_homepage_image_path(image) %>
+
+	<% if image.image? && !image.permanent? %>
+
+	<%= link_to 'Delete', spree.admin_cms_homepage_image_path(image), confirm: 'Are you sure?', method: :delete %>
+
+	<% end %>
+
+
+
+
+	</div>
+	<br/>
+<% end %>
