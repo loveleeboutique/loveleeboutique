@@ -12,6 +12,8 @@ body {
     #header {
       position: relative;
       height: 140px;
+      width: 1400px;
+      margin: 0 auto;
       #logo {
         img {
           left: 25px;
@@ -22,7 +24,7 @@ body {
       }
       nav {
         &#top-nav-bar {
-          width: 87%;
+          width: 86%;
           position: absolute;
           ul {
             li {
@@ -128,6 +130,11 @@ body {
       background: url('/assets/field_for_policies.jpg') 0 0 no-repeat;
       padding: 20px;
       height: 600px;
+      a, a:focus {
+        color: #00ADEE;
+        outline: none;
+        border: 0;
+      }
     }
     .privacy_info {
       h3 {
