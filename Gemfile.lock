@@ -85,6 +85,7 @@ GEM
     ffaker (1.12.1)
     gyoku (0.4.6)
       builder (>= 2.1.2)
+    haml (3.1.7)
     highline (1.6.11)
     hike (1.2.1)
     httparty (0.8.3)
@@ -243,6 +244,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon (~> 2.1.1)
   coffee-rails (~> 3.2.1)
+  haml
   jquery-rails
   pg (~> 0.14)
   rails (= 3.2.8)

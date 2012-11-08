@@ -1,0 +1,5 @@
+%nav
+  %ul#main-nav-bar.inline{"data-hook" => ""}
+    %li#home-link{"data-hook" => ""}= link_to t(:home), root_path
+    - Spree::Taxon.roots.each do |taxon|
+      %li= taxon.name

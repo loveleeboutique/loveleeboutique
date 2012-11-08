@@ -1,0 +1,5 @@
+%header#header
+  = render :partial => 'spree/shared/nav_bar'
+  %figure#logo
+    = logo
+  = render :partial => 'spree/shared/main_nav_bar' if store_menu?

@@ -1,2 +1,40 @@
 @import 'bourbon';
 
+body {
+  background: url('/assets/background.jpg') 0 0 no-repeat white;
+  font-family: "bree-serif",sans-serif;
+  .container {
+    width: 98%;
+    margin-top: 10px;
+    #header {
+      position: relative;
+      nav {
+        &#top-nav-bar {
+          width: 87%;
+        }
+        ul {
+          &#main-nav-bar {
+            border: none;
+            position: absolute;
+            top: 110px;
+            left: 185px;
+            width: 1033px;
+            border: 1px solid
+          }
+        }
+      }
+    }
+    #wrapper {
+      width: 964px;
+      margin: 0 auto;
+      border: 1px solid black;
+      min-height: 200px;
+    }
+    footer {
+      &#footer {
+        border: none;
+      }
+    }
+  }
+}
+

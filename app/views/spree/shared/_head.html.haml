@@ -1,0 +1,17 @@
+%meta{:charset => "utf-8"}
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title= "Lovelee Boutique"
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1", :name => "viewport"}
+-#<%== meta_data_tags %>
+- @protocol = @using_ssl ? "https" : "http"
+= favicon_link_tag image_path('favicon.ico')
+= stylesheet_link_tag 'store/all', :media => 'screen'
+= csrf_meta_tags
+= javascript_include_tag 'store/all'
+%script{:type=>"text/javascript", :src=>"#{@protocol}://use.typekit.net/bgv0uih.js"}
+:javascript
+  try{Typekit.load();}catch(e){}
+/[if lt IE 9]
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+= yield :head
