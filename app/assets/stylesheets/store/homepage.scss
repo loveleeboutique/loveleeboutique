@@ -1,0 +1,58 @@
+body.home.index {
+  @import 'bourbon';
+
+  .carousel_wrapper {
+    width: 964px;
+    height: 508px;
+    border: 1px solid #ffaeb9;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    .carousel {
+      width: 942px;
+      height: 506px;
+      position: relative;
+      border: 1px solid #dfa18e;
+      margin: 0 auto;
+    }
+  }
+
+  .featured_images
+    ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 266px;
+    float: left;
+    @include clearfix;
+    margin-right: 10px;
+    li {
+      &.image {
+        height: 310px;
+        width: 247px;
+        margin-bottom: 10px;
+        border: 1px solid #ffaeb9;
+        padding: 10px;
+      }
+      &.info {
+        width: 248px;
+        height: 20px;
+        background: #ffacb5;
+        text-align: right;
+        color: #fe0057;
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .shop {
+    ul {
+      li {
+        margin: 20px 0;
+        select {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

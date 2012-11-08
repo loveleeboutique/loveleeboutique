@@ -8,7 +8,7 @@
   / <![endif]
   %head{"data-hook" => "inside_head"}
     = render :partial => 'spree/shared/head'
-  %body{:class => body_class, "data-hook" => "body", :id => @body_id || 'default'}
+  %body{:class => body_classes}
     .container
       = render :partial => 'spree/shared/header'
       #wrapper.row{"data-hook" => ""}

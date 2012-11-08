@@ -1,25 +1,61 @@
 @import 'bourbon';
 
 body {
-  background: url('/assets/background.jpg') 0 0 no-repeat white;
-  font-family: "bree-serif",sans-serif;
+  background: url('/assets/background.jpg') top center no-repeat white;
+  font-family: "bree-serif", sans-serif;
+  .hidden {
+    display: none;
+  }
   .container {
     width: 98%;
     margin: 10px auto 0;
     #header {
       position: relative;
+      height: 140px;
+      #logo {
+        img {
+          left: 25px;
+          z-index: 1;
+          position: absolute;
+          top: 5px;
+        }
+      }
       nav {
         &#top-nav-bar {
           width: 87%;
+          position: absolute;
+          ul {
+            li {
+              a, a:hover {
+                color: #fe0057 !important;
+                font-size: 12px;
+                display: block;
+                padding: 15px 7px 0 0;
+              }
+            }
+          }
         }
         ul {
           &#main-nav-bar {
             border: none;
             position: absolute;
-            top: 110px;
-            left: 185px;
+            top: 45px;
+            left: 180px;
             width: 1033px;
-            border: 1px solid
+            border: 1px solid black;
+            height: 53px;
+            li {
+              width: 130px;
+              margin-right: 5px;
+              float: left;
+              text-align: center;
+              line-height: 60px;
+              font-size: 14px;
+              color: black;
+              a, a:hover {
+                color: black !important;
+              }
+            }
           }
         }
       }
@@ -27,12 +63,80 @@ body {
     #wrapper {
       width: 964px;
       margin: 0 auto;
-      border: 1px solid black;
-      min-height: 200px;
     }
     footer {
       &#footer {
+        margin: 30px 0 70px;
         border: none;
+        .footer {
+          width: 964px;
+          margin: 0 auto;
+          ul {
+            &.left {
+              float: left;
+            }
+            &.right {
+              float: right;
+              li {
+                a, a:hover {
+                  text-transform: uppercase;
+                  color: #fe0057 !important;
+                  font-size: 12px;;
+                }
+              }
+            }
+            li {
+              float: left;
+              margin-right: 10px;
+              color: #fe0057;
+              font-size: 12px;
+              a, a:hover {
+                color: #fe0057 !important;
+                font-size: 12px;;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ui-dialog {
+    background: none;
+    border: 0;
+    padding: 0;
+    overflow: visible;
+    .ui-dialog-titlebar {
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+    .ui-dialog-titlebar-close {
+      background: url('/assets/X.png') 0 0 no-repeat;
+      width: 41px;
+      height: 41px;
+      z-index: 1;
+      margin-left: -30px;
+      left: 2px;
+      display: block;
+      text-indent: -4000px;
+      top: 5px;
+      &.ui-state-hover {
+        border: 0;
+      }
+    }
+    .ui-dialog-content {
+      background: url('/assets/field_for_policies.jpg') 0 0 no-repeat;
+      padding: 20px;
+      height: 600px;
+    }
+    .privacy_info {
+      h3 {
+        color: #fe0057;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 10px;
       }
     }
   }

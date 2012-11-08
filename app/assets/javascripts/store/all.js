@@ -10,4 +10,6 @@
 //= require store/spree_core
 //= require store/spree_promo
 
+//= require jquery-ui-1.9.1.custom.min
+
 //= require_tree .
