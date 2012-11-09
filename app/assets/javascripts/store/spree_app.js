@@ -16,3 +16,13 @@ $(window).load(function () {
         });
     });
 })(jQuery);
+
+
+(function ($) {
+    $(function () {
+        $.ajaxSettings.dataType = 'json';
+
+        $('.head ul.navigation').addClass("sf-menu");
+        $('.head ul.navigation').superfish();
+    })
+})
