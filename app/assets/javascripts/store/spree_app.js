@@ -14,15 +14,9 @@ $(window).load(function () {
             });
             return false;
         });
+        $.ajaxSettings.dataType = 'json';
+        $('ul.sf-menu').superfish();
     });
 })(jQuery);
 
 
-(function ($) {
-    $(function () {
-        $.ajaxSettings.dataType = 'json';
-
-        $('.head ul.navigation').addClass("sf-menu");
-        $('.head ul.navigation').superfish();
-    })
-})

@@ -2,8 +2,11 @@
   %ul#main-nav-bar.sf-menu
     %li#home-link{"data-hook" => ""}= link_to t(:home), root_path
     - Spree::Taxon.roots.each do |taxon|
-      %li= link_to taxon.name, seo_url(taxon)
-      - taxon.children.each do |child|
-        %li= link_to child.name, seo_url(child)
+      %li
+        = link_to taxon.name, seo_url(taxon)
+        - if taxon.children.present?
+          %ul
+            - taxon.children.each do |child|
+              %li= link_to child.name, seo_url(child)
     %li
       Contact
