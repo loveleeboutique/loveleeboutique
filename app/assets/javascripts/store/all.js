@@ -11,5 +11,6 @@
 //= require store/spree_promo
 
 //= require jquery-ui-1.9.1.custom.min
+//= require jquery.carousel.min.js
 
 //= require_tree .

@@ -16,6 +16,13 @@ $(window).load(function () {
         });
         $.ajaxSettings.dataType = 'json';
         $('ul.sf-menu').superfish();
+        $('div.slider').carousel({
+            pagination:true,
+            autoSlide:true,
+            autoSlideInterval:5000,
+            animSpeed: "slow",
+            loop: true
+        });
     });
 })(jQuery);
 

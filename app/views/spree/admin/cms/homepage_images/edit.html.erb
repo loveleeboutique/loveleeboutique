@@ -25,14 +25,22 @@
   </div>
 <br/>
   <div>
-    <h3>Category</h3>
-    <%= f.text_field :category %>
+    <h3>Link</h3>
+    <p>Type the link that you wish to link to the image, please include <b>http://www.</b> at the beginning of the link</p>
+    <%= f.text_field :image_link %>
   </div>
 <br/>
   <div>
     <h3>Item Label</h3>
     <%= f.text_field :item_label %>
   </div>
+<% if @homepage_image.position == "slider" %>
+    <br/>
+      <div>
+        <h3>Visible</h3>
+        <%= f.check_box :visible %>
+      </div>
+<% end %>
 <br/>
   <div class="actions">
     <%= f.submit %>

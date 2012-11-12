@@ -9,6 +9,9 @@
 	<% if image.image? %>
 
 	<%= image_tag image.image(:thumb) %>
+    <% if image.visible? && image.position == "slider" %>
+        <b>Visible</b>
+    <% end %>
 
 	<% end %>
 

@@ -1,6 +1,6 @@
 class Spree::HomepageImage < ActiveRecord::Base
 
-  attr_accessible :position, :description, :permanent, :image, :category, :item_label
+  attr_accessible :position, :description, :permanent, :image, :category, :item_label, :visible, :image_link
 
   has_attached_file :image,
                     styles: lambda {|attachment| attachment.instance.image_styles },
