@@ -5,7 +5,7 @@
 
 .featured_images
   - @feature_images.each do |image|
-    - taxon = Spree::Taxon.where(:permalink =>image.item_label.downcase).first
+    - taxon = Spree::Taxon.where(:permalink =>image.category.downcase).first
     %ul
       %li.image
         = link_to image_tag(image.image.url), seo_url(taxon)

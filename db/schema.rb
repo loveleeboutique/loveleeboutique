@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(:version => 20121112011904) do
     t.string   "position"
     t.string   "description"
     t.boolean  "permanent"
-    t.string   "link_url"
+    t.string   "category"
     t.string   "item_label"
     t.string   "image_file_name"
     t.string   "image_content_type"
