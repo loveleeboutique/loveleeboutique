@@ -1,18 +1,17 @@
 .carousel_wrapper
-  .carousel
+  - @slider_images.each do |image|
+    .carousel
+      = image_tag image.image.url
 
 .featured_images
-  %ul
-    %li.image
-    %li.info
+  - @feature_images.each do |image|
+    - taxon = Spree::Taxon.where(:permalink =>image.item_label.downcase).first
+    %ul
+      %li.image
+        = link_to image_tag(image.image.url), seo_url(taxon)
+      %li.info
 
-  %ul
-    %li.image
-    %li.info
-
-  %ul
-    %li.image
-    %li.info
+        = link_to taxon.name, seo_url(taxon)
 
 .shop
   %ul
