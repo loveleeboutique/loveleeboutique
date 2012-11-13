@@ -95,10 +95,32 @@ body.home.index {
     ul {
       width: 100px;
       margin: 0 auto;
+      position: relative;
       li {
         margin: 20px 0;
-        select {
-          width: 100px;
+        position: relative;
+        &.drop {
+          width: 90px;
+          height: 15px;
+          background: white;
+          border: 1px solid #ffaeb9;
+          color: #CC3366;
+          font-size: 12px;
+          padding: 5px;
+        }
+        ul {
+          position: absolute;
+          top: -21px;
+          left: 110px;
+          li {
+            width: 90px;
+            height: 15px;
+            background: white;
+            border: 1px solid #ffaeb9;
+            color: #CC3366;
+            font-size: 12px;
+            padding: 5px;
+          }
         }
       }
     }

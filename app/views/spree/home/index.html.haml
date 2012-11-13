@@ -13,12 +13,24 @@
       %li.info
         = link_to image.item_label, image.image_link
 .shop
-  %ul
+  %ul.sf-menu.sf-vertical
     %li
       = image_tag('/assets/shop_by_size.png')
-    %li
-      = select_tag "select"
+    %li.drop
+      %ul.size
+        %li
+          Clothes
+          %ul
+            %li
+        %li
+          Shoes
+          %ul
+            %li
     %li
       = image_tag('/assets/shop_by_color.png')
-    %li
-      = select_tag "select"
+    %li.drop
+      %ul.shoes
+        %li
+          Color
+          %ul
+            %li
