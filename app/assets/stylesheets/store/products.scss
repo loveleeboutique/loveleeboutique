@@ -17,26 +17,96 @@ body.products {
           }
         }
         .columns {
-          clear: both;
           margin: 10px 0;
-          #product-images {
-            #main-image {
-              border: 1px solid #FFAEB9;
-              padding: 5px;
-              background: transparent;
-              width: 96.7%;
+          &.left {
+            float: left;
+            clear: left;
+            width: 470px;
+            #product-images {
+              #main-image {
+                border: 1px solid #FFAEB9;
+                background: transparent;
+                width: 455px;
+                height: 687px;
+                padding: 0;
+                img {
+                  width: 455px;
+                  height: 687;
+                }
+              }
+              #thumbnails {
+                background: transparent;
+                ul {
+                  li {
+                    border: 1px solid #FFAEB9;
+                    margin-right: 0;
+                    background: transparent;
+                    height: 152px;
+                    margin-right: 13px;
+                    img {
+                      padding: 0;
+                    }
+                    &.selected, &:hover {
+                      border-color: #CC3366;
+                    }
+
+                  }
+                }
+              }
             }
-            #thumbnails {
-              background: transparent;
+          }
+          &.right {
+            width: 450px;
+            border: 1px solid #FFAEB9;
+            padding: 10px;
+            background: white;
+            h1 {
+              color: #CC3366;
+              font-size: 16px;
+              text-transform: uppercase;
+              border: none;
+              margin-bottom: 5px;
+            }
+            #product-price {
+              .selling {
+                p {
+                  font-size: 14px;
+                  color: #CC3366;
+                  padding: 0;
+                }
+              }
+            }
+            #product-variants {
               ul {
                 li {
-                  border: 1px solid #FFAEB9;
-                  margin-right: 5px;
-                  &.selected, &:hover {
-                    border-color: #CC3366;
+                  float: left;
+                  input {
+                    display: none;
                   }
-
+                  label {
+                    span {
+                      border: 1px solid #b1b3b6;
+                      padding: 5px;
+                      width: 25px;
+                      @include inline-block;
+                      text-align: center;
+                      &.selected {
+                        border-color: #FFAEB9;
+                      }
+                    }
+                  }
                 }
+              }
+            }
+            .add-to-cart {
+              clear: left;
+              padding: 10px 0;
+              button {
+                background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+                border: none;
+                font-weight: normal;
+                width: 112px;
+                height: 35px;
               }
             }
           }

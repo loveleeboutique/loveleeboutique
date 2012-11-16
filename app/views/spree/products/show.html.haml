@@ -3,7 +3,7 @@
   %p.back
     - back_taxon = @product.taxons.map(&:name).pop
     = link_to "&#171; Back to #{back_taxon}".html_safe, seo_url(Spree::Taxon.find_by_name(back_taxon))
-  .columns
+  .columns.left
     .row
       #product-images
         #main-image
@@ -12,12 +12,12 @@
           = render :partial => 'thumbnails', :locals => { :product => @product }
       %div{"data-hook" => "product_properties"}
         = render :partial => 'properties'
-  .columns.ten.omega{"data-hook" => "product_right_part"}
+  .columns.right
     .row{"data-hook" => "product_right_part_wrap"}
       #product-description{"data-hook" => "product_description"}
         %h1.product-title{:itemprop => "name"}= accurate_title
-        %div{"data-hook" => "description", :itemprop => "description"}
-          = product_description(@product) rescue t(:product_has_no_description)
         #cart-form{"data-hook" => "cart_form"}
           = render :partial => 'cart_form'
+        %div{"data-hook" => "description", :itemprop => "description"}
+          = product_description(@product) rescue t(:product_has_no_description)
       = render :partial => 'taxons'

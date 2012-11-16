@@ -12,5 +12,6 @@
 
 //= require jquery-ui-1.9.1.custom.min
 //= require jquery.carousel.min.js
+//= require jquery.zoom.js
 
 //= require_tree .
