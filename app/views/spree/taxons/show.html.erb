@@ -1,4 +1,4 @@
-<% if @taxon.image.attachment? %>
+<% if @taxon.image.try(:attachment?) %>
 <%= image_tag(@taxon.image.attachment.url(:banner) ) %>
 <% end %>
 
