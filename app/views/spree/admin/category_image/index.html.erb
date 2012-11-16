@@ -2,7 +2,7 @@
 
 <% if @image.attachment? %>
   <div class="category_image">
-    <%= link_to(image_tag(@image.attachment.url(:large), width: '450x300'),@image.link_url,:target => "_blank") %>
+    <%= image_tag(@image.attachment.url(:banner) ) %>
 
     <div class="image_url">
       <%= text_field_tag nil, @image.attachment.url(:large), disabled: 'disabled' %>

@@ -3,7 +3,7 @@ module Spree
     validates_attachment_presence :attachment
     validate :no_attachment_errors
 
-    attr_accessible :alt, :attachment, :position, :viewable_type, :viewable_id,  :link_url, :popup_link, :popup_width, :popup_height
+    attr_accessible :alt, :attachment, :position, :viewable_type, :viewable_id
 
     has_attached_file :attachment,
                       :styles => {
