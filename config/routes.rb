@@ -16,6 +16,15 @@ Loveleeboutique::Application.routes.draw do
         resources :homepage_images
         resources :metadata_tags
       end
+
+
+      resources :categories do
+        resources :category_image, only: [:index, :create]
+        collection do
+          post :update_positions
+        end
+      end
+
     end
   end
   # See how all your routes lay out with "rake routes"

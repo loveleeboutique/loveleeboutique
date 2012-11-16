@@ -1,0 +1,35 @@
+<h1>Editing <%= @category.name %></h1>
+
+<% if @image.attachment? %>
+  <div class="category_image">
+    <%= link_to(image_tag(@image.attachment.url(:large), width: '450x300'),@image.link_url,:target => "_blank") %>
+
+    <div class="image_url">
+      <%= text_field_tag nil, @image.attachment.url(:large), disabled: 'disabled' %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_for @image, :url => spree.admin_category_category_image_index_path(@category), :html => { :method => :post, :multipart => true } do |f| %>
+  <%= f.field_container :attachment do %>
+    <%= f.label :attachment, 'Category Image' %>
+    <%= f.file_field :attachment %>
+    <%= f.error_message_on :attachment %>
+  <% end %>
+
+  <%= f.field_container :alt_text do %>
+    <%= f.label :alt, 'Alt Text' %>
+    <%= f.text_field :alt %>
+    <%= f.error_message_on :alt %>
+  <% end %>
+
+
+
+
+
+
+  <p class="form-buttons" data-hook="buttons">
+    <%= button 'Upload' %>
+    <%= t(:or) %> <%= link_to t(:cancel), '', :id => 'cancel_link' %>
+  </p>
+<% end %>

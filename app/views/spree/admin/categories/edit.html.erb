@@ -1,0 +1,17 @@
+Editing <%= @category.name %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @category } %>
+
+<% if @category.image.try(:attachment?) %>
+    <div class="category_image">
+      <%= link_to(image_tag(@category.image.attachment.url(:large), width: '450x300'), @category.image.link_url, :target => "_blank") %>
+
+      <div class="image_url">
+        <%= text_field_tag nil, @category.image.attachment.url(:large), disabled: 'disabled' %>
+      </div>
+    </div>
+<% end %>
+
+
+<%= form_for [:admin, @category], :method => :put, :url => admin_category_path(@category), :html => {:multipart => true} do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+<% end %>

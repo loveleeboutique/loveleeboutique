@@ -1,0 +1,18 @@
+%h1= t(:listing_categories)
+#new_category{"data-hook" => ""}
+  = render :partial => "categories_table", :locals => {:categories => @collection}
+
+- content_for :sidebar do
+  %div{"data-hook" => "admin_categories_sidebar"}
+    = search_form_for [:admin, @search], :url => "edit_admin_category_path" do |f|
+      .box
+        %h3= t(:search)
+        - locals = {:f => f}
+        %div{"data-hook" => "admin_categories_index_search"}
+          %p
+            = f.label :name_cont, t(:name)
+            %br/
+            = f.text_field :name_cont, :size => 15
+        %div{"data-hook" => "admin_categories_index_search_buttons"}
+          %p.form-buttons
+            = button t(:search)

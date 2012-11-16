@@ -1,0 +1,10 @@
+%table#listing_categories.index.sortable{"data-hook" => "categories_table"}
+  %tr{"data-hook" => "admin_categories_index_headers"}
+    %th= t(:name)
+    %th{"data-hook" => "admin_categories_index_header_actions"}
+  - categories.each do |category|
+    %tr
+      %td
+        = link_to category.name, spree.admin_category_category_image_index_path(category)
+      %td
+        = link_to "Edit", spree.admin_category_category_image_index_path(category), :html => {:class => 'edit'}
