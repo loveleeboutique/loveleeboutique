@@ -24,6 +24,8 @@ $(window).load(function () {
             animSpeed: "slow",
             loop: true
         });
+
+        $('.shop ul li:has(ul)').css({'background':'url("/assets/lovelee_arrow_right.png") 90px 7px no-repeat white', 'background-size':'7px'});
     });
 })(jQuery);
 

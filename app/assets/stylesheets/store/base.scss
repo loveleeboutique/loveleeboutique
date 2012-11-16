@@ -6,9 +6,24 @@ body {
   .hidden {
     display: none;
   }
+  a, a:hover {
+    color: #CC3366 !important;;
+  }
   .container {
     width: 98%;
     margin: 10px auto 0;
+    #breadcrumbs {
+      border: none;
+      margin-left: -30px;
+      ul {
+        li {
+          margin-right: 5px;
+          a, a:hover {
+            color: #CC3366 !important;;
+          }
+        }
+      }
+    }
     #header {
       position: relative;
       height: 140px;
@@ -56,6 +71,15 @@ body {
               font-size: 12px;
               color: white;
               background: white;
+              span {
+                &.sf-sub-indicator {
+                  background: url('/assets/lovelee_arrow_right.png') 5px 21px no-repeat;
+                  background-size: 7px;
+                  text-indent: -4000px;
+                  @include inline-block;
+                  width: 12px;
+                }
+              }
               a, a:hover {
                 color: white !important;
                 font-size: 12px;

@@ -1,0 +1,47 @@
+@import 'bourbon';
+
+body.products {
+  &.show {
+    #content {
+      .product {
+        border: 1px solid #FFAEB9;
+        padding: 10px;
+        @include clearfix;
+        p {
+          &.back {
+            background: white;
+            padding: 10px 10px 10px 20px;
+            float: left;
+            @include clearfix;
+            width: auto;
+          }
+        }
+        .columns {
+          clear: both;
+          margin: 10px 0;
+          #product-images {
+            #main-image {
+              border: 1px solid #FFAEB9;
+              padding: 5px;
+              background: transparent;
+              width: 96.7%;
+            }
+            #thumbnails {
+              background: transparent;
+              ul {
+                li {
+                  border: 1px solid #FFAEB9;
+                  margin-right: 5px;
+                  &.selected, &:hover {
+                    border-color: #CC3366;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
