@@ -1,0 +1,33 @@
+@import 'bourbon';
+
+body.taxons {
+  &.show {
+    ul#products {
+      li {
+        width: 200px;
+        float: left;
+        .product-image {
+          background: transparent;
+          padding: 5px 5px 0;
+          border: 1px solid #FFAEB9;
+          &:hover {
+            border-color: #CC3366;
+          }
+        }
+        .info {
+          width: 181px;
+          background: #ffacb5;
+          text-align: left;
+          padding: 10px;
+          font-size: 14px;
+          text-transform: capitalize;
+          color: #CC3366;
+          margin-top: 5px;
+          a, a:hover {
+            color: #CC3366 !important;
+          }
+        }
+      }
+    }
+  }
+}

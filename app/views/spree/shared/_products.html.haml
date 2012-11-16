@@ -1,0 +1,20 @@
+- paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+- paginated_products ||= products
+- if products.empty?
+  = t(:no_products_found)
+- elsif params.key?(:keywords)
+  %h6.search-results-title= t(:search_results, :keywords => h(params[:keywords]))
+- if products.any?
+  %ul#products
+    - reset_cycle('default')
+    - products.each do |product|
+      - if Spree::Config[:show_zero_stock_products] || product.has_stock?
+        %li
+          .product-image
+            = link_to image_tag(product.images.first.attachment.url(:small)), "#"
+          .info
+            = link_to truncate(product.name, :length => 50), product, :title => product.name
+            = product.display_price
+    - reset_cycle("classes")
+- if paginated_products.respond_to?(:num_pages)
+  = paginate paginated_products
