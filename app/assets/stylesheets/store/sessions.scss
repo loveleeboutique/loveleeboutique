@@ -25,3 +25,18 @@ body.user_sessions, body.user_registrations, body.user_passwords {
     }
   }
 }
+
+body.users.show {
+  #content {
+    h1, h3, p {
+      color: #CC3366;
+    }
+    .account-summary, .account-my-orders {
+      #user-info {
+        color: #CC3366;
+        border-color: #ffaeb9;
+      }
+    }
+
+  }
+}
