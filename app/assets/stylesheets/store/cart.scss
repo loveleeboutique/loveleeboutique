@@ -15,6 +15,22 @@ body.orders.edit {
             width: 75%;
             float: left;
           }
+          .shopping_empty {
+            clear: both;
+            p {
+              color: #CC3366;
+              font-size: 14px;
+            }
+            .button {
+              background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+              border: none;
+              width: auto;
+              padding: 10px;
+              height: 15px;
+              color: white !important;
+              font-size: 16px;
+            }
+          }
           #checkout-link-top {
             background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
             border: none;

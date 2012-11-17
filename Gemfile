@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg', '~> 0.14'
 gem 'bourbon', '~> 2.1.1'
 gem 'haml'
+gem 'tinymce-rails', '3.5.6'
 
 # Gems used only for assets and not required
 # in production environments by default.

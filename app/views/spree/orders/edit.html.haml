@@ -1,8 +1,9 @@
 - @body_id = 'cart'
 %h1= t(:shopping_cart)
-= link_to t(:checkout), checkout_state_path(@order.checkout_steps.first), :class => 'button checkout primary', :id => 'checkout-link-top'
+- if @order.line_items.present?
+  = link_to t(:checkout), checkout_state_path(@order.checkout_steps.first), :class => 'button checkout primary', :id => 'checkout-link-top'
 - if @order.line_items.empty?
-  %div{"data-hook" => "empty_cart"}
+  %div{"data-hook" => "empty_cart", :class => "shopping_empty"}
     %p= t(:your_cart_is_empty)
     %p= link_to t(:continue_shopping), products_path, :class => 'button continue'
 - else

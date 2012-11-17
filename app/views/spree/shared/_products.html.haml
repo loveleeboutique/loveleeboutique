@@ -11,7 +11,7 @@
       - if Spree::Config[:show_zero_stock_products] || product.has_stock?
         %li
           .product-image
-            = link_to image_tag(product.images.first.attachment.url(:small)), "#"
+            = link_to image_tag(product.images.first.attachment.url(:small)), product
           .info
             = link_to truncate(product.name, :length => 50), product, :title => product.name
             = link_to product.display_price, product

@@ -19,5 +19,5 @@
         #cart-form{"data-hook" => "cart_form"}
           = render :partial => 'cart_form'
         %div{"data-hook" => "description", :itemprop => "description"}
-          = product_description(@product) rescue t(:product_has_no_description)
+          = product_description(@product).html_safe rescue t(:product_has_no_description)
       = render :partial => 'taxons'

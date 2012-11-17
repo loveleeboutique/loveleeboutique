@@ -1,0 +1,80 @@
+body {
+    font-size: 12px;
+}
+
+.pull-quote {
+    background: #D4C7D2;
+    width: 40%;
+    float: right;
+    padding: 8px;
+    margin: 8px;
+}
+
+.pull-quote h4 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #A6599C;
+    margin: 3px 0;
+}
+
+img {
+    border: 1px solid #A5A5A2;
+}
+
+table.align-center {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table.align-left {
+    float: left;
+    margin: 15px 15px 15px 0;
+}
+
+table.align-top-left {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+table.align-right {
+    float: right;
+    margin: 15px 0 15px 15px;
+}
+
+table.align-top-right {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+table.align-center tr td, table.align-left tr td, table.align-top-left tr td, table.align-right tr td, table.align-top-right tr td {
+    padding: 0;
+}
+
+table caption {
+    padding: 0 2px;
+    background: none;
+    font-size: 12px;
+}
+
+table tr {
+    border: none;
+}
+
+table tr td {
+    padding: 3px;
+    line-height: 14px;
+}
+
+table.border {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+table.border tr th, table.border tr td {
+    border: 1px solid #000000;
+    padding: 3px;
+}

@@ -9,5 +9,7 @@
 
 //= require admin/spree_core
 //= require admin/spree_promo
+//= require tinymce-jquery
+//= require tinymce
 
 //= require_tree .
