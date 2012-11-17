@@ -113,6 +113,9 @@ body {
                 > li {
                   background: white;
                   background-image: none;
+                  border: 1px solid #ffaeb9;
+                  border-top: none;
+                  border-bottom: none;
                   a, a:hover {
                     color: #CC3366 !important;
                   }

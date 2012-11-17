@@ -16,6 +16,7 @@ $(window).load(function () {
         });
         $.ajaxSettings.dataType = 'json';
         $('ul#main-nav-bar.sf-menu').superfish();
+        $('ul#main-nav-bar li ul li:last-child').css({'border-bottom':'1px solid #ffaeb9'});
         $('.shop ul.sf-menu').superfish();
         $('div.slider').carousel({
             pagination:true,
