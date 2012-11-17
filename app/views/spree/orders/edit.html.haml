@@ -5,7 +5,7 @@
 - if @order.line_items.empty?
   %div{"data-hook" => "empty_cart", :class => "shopping_empty"}
     %p= t(:your_cart_is_empty)
-    %p= link_to t(:continue_shopping), products_path, :class => 'button continue'
+    %p= link_to t(:continue_shopping), root_path, :class => 'button continue'
 - else
   %div{"data-hook" => "outside_cart_form"}
     = form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form|
@@ -26,4 +26,4 @@
       %p#clear_cart_link{"data-hook" => ""}
         = submit_tag t(:empty_cart), :class => 'button gray'
         = t(:or)
-        = link_to t(:continue_shopping), products_path, :class => 'continue button gray'
+        = link_to t(:continue_shopping), root_path, :class => 'continue button gray'
