@@ -1,6 +1,10 @@
 body.home.index {
   @import 'bourbon';
-
+  .flash {
+    &.notice {
+     display: none;
+    }
+  }
   .carwrapper {
     width: 964px;
     height: 506px;

@@ -1,0 +1,137 @@
+@import 'bourbon';
+
+body.orders.edit {
+  .container {
+    .row {
+      &#wrapper {
+        background: white;
+        padding-bottom: 20px;
+        #content {
+          background: white;
+          padding: 0 10px;
+          h1 {
+            color: #CC3366;
+            padding: 10px 0;
+            width: 75%;
+            float: left;
+          }
+          #checkout-link-top {
+            background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+            border: none;
+            width: auto;
+            padding: 0 10px;
+            color: white;
+            padding: 10px;
+            height: 15px;
+            color: white !important;
+            float: right;
+            margin: 10px 0 0;
+            font-size: 18px;
+          }
+          table {
+            &#cart-detail {
+              thead {
+                background: #e60363;
+                color: white;
+                text-align: right;
+                tr {
+                  th {
+                    padding: 5px 0;
+                    &.cart-item-description-header {
+                      text-align: center;
+                      padding-left: 50px;
+                    }
+                  }
+                }
+              }
+              tbody {
+                &#line_items {
+                  tr {
+                    border-bottom: 1px solid #ffaeb9;
+                    td {
+                      color: #CC3366;
+                      text-align: right;
+                      padding: 5px 0;
+                      &.cart-item-image {
+                        text-align: left;
+                        img {
+                          border: 1px solid #ffaeb9;
+                          width: 150px;
+                        }
+                      }
+                      &.cart-item-description {
+                        text-align: left;
+                      }
+                      &.cart-item-price {
+
+                      }
+                      &.cart-item-quantity {
+
+                      }
+                      &.cart-item-total {
+
+                      }
+                      &.cart-item-delete {
+                        a {
+                          float: right;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .columns {
+            h5, span {
+              color: #CC3366;
+            }
+          }
+          .links {
+            .button, button {
+              background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+              border: none;
+              width: auto;
+              padding: 0 10px;
+              color: white;
+              height: 35px;
+              font-size: 18px;
+            }
+            button {
+              &.primary {
+                margin-right: 20px;
+              }
+            }
+            a.button {
+              padding: 10px;
+              height: 15px;
+              color: white !important;
+            }
+          }
+          #empty-cart {
+            color: #CC3366;
+            .button {
+              background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+              border: none;
+              width: auto;
+              padding: 0 10px;
+              color: white;
+              height: 35px;
+            }
+            a.button {
+              padding: 10px;
+              height: 15px;
+              color: white !important;
+            }
+            input {
+              margin-right: 10px;
+            }
+            a {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

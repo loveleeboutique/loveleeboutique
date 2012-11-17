@@ -1,0 +1,27 @@
+@import 'bourbon';
+
+body.user_sessions, body.user_registrations, body.user_passwords {
+  #existing-customer, #new-customer, #forgot-password {
+    color: #CC3366;
+    h6 {
+      color: #CC3366;
+      font-size: 16px;
+    }
+    form {
+      label {
+        color: #CC3366;
+      }
+      input {
+        &.primary {
+          background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+          display: block;
+          width: auto;
+          height: 35px;
+          text-align: center;
+          border: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
