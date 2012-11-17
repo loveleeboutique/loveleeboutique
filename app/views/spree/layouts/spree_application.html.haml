@@ -17,5 +17,5 @@
         #content{:class => "columns omega #{!content_for?(:sidebar) ? "sixteen alpha" : "twelve"}", "data-hook" => ""}
           = flash_messages
           = yield
-      = render :partial => 'spree/shared/footer'
+    = render :partial => 'spree/shared/footer'
     = render :partial => 'spree/shared/google_analytics'

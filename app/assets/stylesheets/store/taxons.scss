@@ -2,32 +2,56 @@
 
 body.taxons {
   &.show {
-    ul#products {
-      li {
-        width: 200px;
-        float: left;
-        .product-image {
-          background: transparent;
-          padding: 5px 5px 0;
-          border: 1px solid #FFAEB9;
-          &:hover {
-            border-color: #CC3366;
-          }
-        }
-        .info {
-          width: 181px;
-          background: #ffacb5;
-          text-align: left;
-          padding: 10px;
-          font-size: 14px;
-          text-transform: capitalize;
+    #content {
+      border: 1px solid #ffacb5;
+      padding: 10px;
+      .banner {
+        width: 942px;
+        height: 308px;
+        position: relative;
+        border: 1px solid #dfa18e;
+        margin-bottom: 10px;
+        .taxon_title {
+          position: absolute;
+          top: 0;
+          padding: 0;
+          background: white;
           color: #CC3366;
-          margin-top: 5px;
-          a, a:hover {
-            color: #CC3366 !important;
+          width: 142px;
+          text-align: center;
+          height: 35px;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+      ul#products {
+        li {
+          width: 200px;
+          float: left;
+          .product-image {
+            background: transparent;
+            padding: 5px 5px 0;
+            border: 1px solid #FFAEB9;
+            &:hover {
+              border-color: #CC3366;
+            }
+          }
+          .info {
+            width: 181px;
+            background: #ffacb5;
+            text-align: left;
+            padding: 10px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: #CC3366;
+            margin-top: 5px;
+            a, a:hover {
+              color: #CC3366 !important;
+            }
           }
         }
       }
     }
+
   }
 }

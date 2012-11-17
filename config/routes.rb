@@ -26,6 +26,8 @@ Loveleeboutique::Application.routes.draw do
       end
 
     end
+
+    match '/contact', :to => 'home#contact'
   end
   # See how all your routes lay out with "rake routes"
 

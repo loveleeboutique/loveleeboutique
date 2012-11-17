@@ -14,7 +14,7 @@
             = link_to image_tag(product.images.first.attachment.url(:small)), "#"
           .info
             = link_to truncate(product.name, :length => 50), product, :title => product.name
-            = product.display_price
+            = link_to product.display_price, product
     - reset_cycle("classes")
 - if paginated_products.respond_to?(:num_pages)
   = paginate paginated_products

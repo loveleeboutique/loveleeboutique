@@ -130,36 +130,37 @@ body {
       width: 964px;
       margin: 0 auto;
     }
-    footer {
-      &#footer {
-        margin: 30px 0 70px;
-        border: none;
-        .footer {
-          width: 964px;
-          margin: 0 auto;
-          ul {
-            &.left {
-              float: left;
-            }
-            &.right {
-              float: right;
-              li {
-                a, a:hover {
-                  text-transform: uppercase;
-                  color: #CC3366 !important;
-                  font-size: 12px;;
-                }
-              }
-            }
+  }
+  footer {
+    &#footer {
+      margin: 30px 0 70px;
+      border: none;
+      width: 100%;
+      .footer {
+        width: 964px;
+        margin: 0 auto;
+        ul {
+          &.left {
+            float: left;
+          }
+          &.right {
+            float: right;
             li {
-              float: left;
-              margin-right: 10px;
-              color: #CC3366;
-              font-size: 12px;
               a, a:hover {
+                text-transform: uppercase;
                 color: #CC3366 !important;
-                font-size: 12px;
+                font-size: 12px;;
               }
+            }
+          }
+          li {
+            float: left;
+            margin-right: 10px;
+            color: #CC3366;
+            font-size: 12px;
+            a, a:hover {
+              color: #CC3366 !important;
+              font-size: 12px;
             }
           }
         }

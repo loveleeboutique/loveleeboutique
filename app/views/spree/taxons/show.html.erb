@@ -1,10 +1,13 @@
-<% if @taxon.image.try(:attachment?) %>
-<%= image_tag(@taxon.image.attachment.url(:banner) ) %>
-<% end %>
 
-<div data-hook="taxon_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+<div class="banner">
+  <div class="taxon_title">
+    <p><%= @taxon.name %></p>
+  </div>
+  <% if @taxon.image.try(:attachment?) %>
+    <%= image_tag(@taxon.image.attachment.url(:banner) ) %>
+  <% end %>
 </div>
+
 
 <% unless params[:keyword].present? %>
   <div data-hook="taxon_children">
