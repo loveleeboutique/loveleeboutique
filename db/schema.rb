@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118053612) do
+ActiveRecord::Schema.define(:version => 20121119031132) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -294,6 +294,20 @@ ActiveRecord::Schema.define(:version => 20121118053612) do
 
   add_index "spree_preferences", ["key"], :name => "index_spree_preferences_on_key", :unique => true
 
+  create_table "spree_product_groups", :force => true do |t|
+    t.string "name"
+    t.string "permalink"
+    t.string "order"
+  end
+
+  add_index "spree_product_groups", ["name"], :name => "index_product_groups_on_name"
+  add_index "spree_product_groups", ["permalink"], :name => "index_product_groups_on_permalink"
+
+  create_table "spree_product_groups_products", :id => false, :force => true do |t|
+    t.integer "product_id"
+    t.integer "product_group_id"
+  end
+
   create_table "spree_product_option_types", :force => true do |t|
     t.integer  "position"
     t.integer  "product_id"
@@ -311,6 +325,15 @@ ActiveRecord::Schema.define(:version => 20121118053612) do
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
+
+  create_table "spree_product_scopes", :force => true do |t|
+    t.string  "name"
+    t.text    "arguments"
+    t.integer "product_group_id"
+  end
+
+  add_index "spree_product_scopes", ["name"], :name => "index_product_scopes_on_name"
+  add_index "spree_product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "spree_products", :force => true do |t|
     t.string   "name",                 :default => "", :null => false
