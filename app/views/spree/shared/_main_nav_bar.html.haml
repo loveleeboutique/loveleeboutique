@@ -2,7 +2,9 @@
   %ul#main-nav-bar.sf-menu
     %li.home
       = link_to t(:home), root_path
-    - Spree::Taxon.roots.each do |taxon|
+    %li.new
+      = link_to t(:new), new_path
+    - Spree::Taxonomy.where(:name => "Categories").first.root.children.each do |taxon|
       %li{:class => taxon.name.downcase}
         = link_to taxon.name, seo_url(taxon)
         - if taxon.children.present?

@@ -22,15 +22,24 @@
         %li
           Clothes
           %ul
-            %li
+            - Spree::OptionType.where(:name => "clothes-size").first.option_values.each do |ov|
+              %li
+                - pg = Spree::ProductGroup.find_by_permalink(ov.name.to_url)
+                = link_to ov.presentation, pg_search_path(:product_group_name => pg.permalink)
         %li
           Shoes
           %ul
-            %li
+            - Spree::OptionType.where(:name => "shoes-size").first.option_values.each do |ov|
+              %li
+                - pg = Spree::ProductGroup.find_by_permalink(ov.name.to_url)
+                = link_to ov.presentation, pg_search_path(:product_group_name => pg.permalink)
     %li
       = image_tag('/assets/shop_by_color.png')
     %li.drop
       Color
-      %ul.shoes
-        %li
+      %ul
+        - Spree::Taxonomy.where(:name => "Colors").first.root.children.each do |color|
+          %li
+            - pg = Spree::ProductGroup.find_by_permalink(color.name.to_url)
+            = link_to color.name #, pg_search_path(:product_group_name => pg.permalink)
 

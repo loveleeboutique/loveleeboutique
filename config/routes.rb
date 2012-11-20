@@ -11,6 +11,9 @@ Loveleeboutique::Application.routes.draw do
 
     match '/admin/homepage_images', :to => 'admin/cms/homepage_images#index', :as => :admin_homepage_images
 
+
+    match '/new', :to => 'home#new'
+
     namespace :admin do
       namespace :cms do
         resources :homepage_images

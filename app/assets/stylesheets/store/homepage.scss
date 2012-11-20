@@ -2,7 +2,7 @@ body.home.index {
   @import 'bourbon';
   .flash {
     &.notice {
-     display: none;
+      display: none;
     }
   }
   .carwrapper {
@@ -103,6 +103,7 @@ body.home.index {
       li {
         margin: 20px 0;
         position: relative;
+        cursor: pointer;
         &.drop {
           width: 90px;
           height: 15px;
@@ -124,6 +125,10 @@ body.home.index {
             color: #CC3366;
             font-size: 12px;
             padding: 5px;
+            a {
+              width: 100%;
+              display: block;
+            }
           }
         }
       }

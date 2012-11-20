@@ -176,7 +176,8 @@ module Spree
     end
 
     def to_s
-      "<Spree::ProductGroup" + (id && "[#{id}]").to_s + ":'#{to_url}'>"
+      url = self.is_a?(String) ? to_url : self.name.to_url
+      "<Spree::ProductGroup" + (id && "[#{id}]").to_s + ":'#{url}'>"
     end
 
 
