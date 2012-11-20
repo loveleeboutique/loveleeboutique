@@ -166,7 +166,7 @@ module Spree
       ActiveRecord::Base.connection.execute "DELETE FROM spree_product_groups_products WHERE product_group_id = #{self.id}"
 
       # and generate the new group entirely in SQL
-      ActiveRecord::Base.connection.execute "INSERT INTO spree_product_groups_products #{dynamic_products(false).scoped(:select => "spree_products.id").to_sql}"
+      ActiveRecord::Base.connection.execute "INSERT INTO spree_product_groups_products #{dynamic_products(false).scoped(:select => "#{self.id}").to_sql}"
     end
 
     def generate_preview(size = Spree::Config[:admin_pgroup_preview_size])
