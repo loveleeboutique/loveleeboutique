@@ -11,7 +11,7 @@ class Spree::Admin::CategoriesController < Spree::Admin::BaseController
 
 
   def index
-    @collection = Spree::Taxon.roots
+    @collection = Spree::Taxon.find_by_name("Categories").descendants
     respond_with(@collection) do |format|
       format.html
       format.json { render :json => json_data }

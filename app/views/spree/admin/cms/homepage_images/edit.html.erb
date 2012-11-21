@@ -24,6 +24,7 @@
     <%= f.file_field :image %>
   </div>
 <br/>
+<% unless @homepage_image.position == "new" %>
   <div>
     <h3>Link</h3>
     <p>Type the link that you wish to link to the image, please include <b>http://www.</b> at the beginning of the link</p>
@@ -34,6 +35,7 @@
     <h3>Item Label</h3>
     <%= f.text_field :item_label %>
   </div>
+<% end %>
 <% if @homepage_image.position == "slider" %>
     <br/>
       <div>

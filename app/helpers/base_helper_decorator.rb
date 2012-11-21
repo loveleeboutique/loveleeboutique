@@ -9,8 +9,13 @@ module Spree
       separator = raw(separator)
       crumbs = [content_tag(:li, link_to(t(:home), root_path) + separator)]
       if taxon
-        crumbs << taxon.ancestors.collect { |ancestor| content_tag(:li, link_to(ancestor.name, seo_url(ancestor)) + separator) } unless taxon.ancestors.empty?
-        crumbs << content_tag(:li, content_tag(:span, link_to(taxon.name, seo_url(taxon))))
+        crumbs << taxon.ancestors.collect { |ancestor| content_tag(:li, link_to(ancestor.name, seo_url(ancestor)) + separator, :class => ancestor.name) } unless taxon.ancestors.empty?
+        if taxon.name == "Categories"
+          crumbs << content_tag(:li, content_tag(:span, link_to("New", new_path)))
+        else
+          crumbs << content_tag(:li, content_tag(:span, link_to(taxon.name, seo_url(taxon))))
+        end
+
       else
         crumbs << content_tag(:li, content_tag(:span, t(:products)))
       end

@@ -1,8 +1,8 @@
 .banner
   .taxon_title
     %p New
-  - if @taxon.image.try(:attachment?)
-    = image_tag(@taxon.image.attachment.url(:banner) )
+  - if @new_image.present?
+    = image_tag(@new_image)
 
 - unless params[:keyword].present?
   %div{"data-hook" => "taxon_children"}

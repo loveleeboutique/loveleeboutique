@@ -22,6 +22,9 @@ body {
           a, a:hover {
             color: #CC3366 !important;;
           }
+          &.Categories {
+            display: none;
+          }
         }
       }
     }

@@ -11,6 +11,7 @@ Spree::HomeController.class_eval do
   def new
     @taxon = Spree::Taxonomy.where(:name => "Categories").first.root
     @products = Spree::Product.where("available_on < ?", 2.weeks.ago)
+    @new_image = Spree::HomepageImage.where(:position => "new").first.image
 
   end
 
