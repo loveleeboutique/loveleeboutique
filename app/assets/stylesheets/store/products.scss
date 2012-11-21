@@ -3,6 +3,8 @@
 body.products {
   &.show {
     #content {
+      border: none !important;
+      padding: 0 !important;
       .product {
         border: 1px solid #FFAEB9;
         padding: 10px;
@@ -56,7 +58,7 @@ body.products {
             }
           }
           &.right {
-            width: 425px;
+            width: 445px;
             float: right;
             border: 1px solid #FFAEB9;
             padding: 10px;
