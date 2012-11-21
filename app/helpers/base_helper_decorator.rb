@@ -22,5 +22,21 @@ module Spree
       crumb_list = content_tag(:ul, raw(crumbs.flatten.map { |li| li.mb_chars }.join), :class => 'inline')
       content_tag(:nav, crumb_list, :id => 'breadcrumbs')
     end
+
+    def variant_options(v, allow_back_orders = Spree::Config[:allow_backorders], include_style = true)
+      list = v.options_text
+
+      # We shouldn't show out of stock if the product is infact in stock
+      # or when we're not allowing backorders.
+      unless (allow_back_orders || v.in_stock?)
+        list = if include_style
+                 content_tag(:span, "#{list}", :class => 'out-of-stock')
+               else
+                 "#{t(:out_of_stock)} #{list}"
+               end
+      end
+
+      list
+    end
   end
 end

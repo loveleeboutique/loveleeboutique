@@ -1,0 +1,12 @@
+<%= render :partial => 'spree/admin/shared/cms_sub_menu' %>
+<h1>Manage Static Pages</h1>
+
+<% @static_pages.each do |static_page| %>
+    <div>
+      <%= static_page.name %>
+
+
+      <%= link_to "Edit", spree.edit_admin_cms_static_page_path(static_page) %>
+    </div>
+    <br/>
+<% end %>

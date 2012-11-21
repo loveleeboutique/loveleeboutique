@@ -10,6 +10,7 @@ Loveleeboutique::Application.routes.draw do
   Spree::Core::Engine.routes.prepend do
 
     match '/admin/homepage_images', :to => 'admin/cms/homepage_images#index', :as => :admin_homepage_images
+    match '/admin/static_pages', :to => 'admin/cms/static_pages#index', :as => :admin_static_pages
 
 
     match '/new', :to => 'home#new'
@@ -17,6 +18,7 @@ Loveleeboutique::Application.routes.draw do
     namespace :admin do
       namespace :cms do
         resources :homepage_images
+        resources :static_pages
         resources :metadata_tags
       end
 

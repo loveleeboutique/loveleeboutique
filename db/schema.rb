@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121204734) do
+ActiveRecord::Schema.define(:version => 20121121223036) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -503,6 +503,13 @@ ActiveRecord::Schema.define(:version => 20121121204734) do
     t.string  "name"
     t.string  "abbr"
     t.integer "country_id"
+  end
+
+  create_table "spree_static_pages", :force => true do |t|
+    t.string   "name"
+    t.text     "copy"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_tax_categories", :force => true do |t|

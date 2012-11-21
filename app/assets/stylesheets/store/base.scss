@@ -9,6 +9,14 @@ body {
   a, a:hover {
     color: #CC3366 !important;;
   }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: #CC3366;
+  }
+
+  p {
+    font-size: 14px;
+  }
   .container {
     width: 98%;
     margin: 10px auto 0;
@@ -203,7 +211,7 @@ body {
       padding: 20px;
       height: 600px;
       a, a:focus {
-        color: #00ADEE;
+        color: #00ADEE !important;
         outline: none;
         border: 0;
       }

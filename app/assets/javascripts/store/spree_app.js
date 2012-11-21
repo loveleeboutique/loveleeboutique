@@ -40,6 +40,7 @@ $(window).load(function () {
         });
 
         $('#product-variants ul li:first').css({'padding-left':'0'});
+        $('.products.show .out-of-stock').parent().hide()
     });
 })(jQuery);
 

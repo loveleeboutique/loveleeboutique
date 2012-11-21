@@ -1,0 +1,26 @@
+<%= form_for @static_page, :url => spree.admin_cms_static_page_path(@static_page), :method => "PUT", :html => { :multipart => true } do |f| %>
+  <% if @static_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@static_page.errors.count, "error") %> prohibited this static_page from being saved:</h2>
+
+      <ul>
+      <% @static_page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br/>
+    <div class="field">
+    <h3><%= @static_page.name %></h3>
+    <%= f.text_area :copy, :class => "tinymce" %>
+  </div>
+<br/>
+
+<br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Back", spree.admin_cms_static_pages_path %>
