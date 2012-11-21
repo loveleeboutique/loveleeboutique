@@ -47,7 +47,7 @@ end
 # To use debugger
  gem 'debugger'
 gem 'spree', '1.2.0'
-gem 'spree_product_groups', :git => 'git@github.com:spree/spree_product_groups.git'
+gem 'spree_product_groups', :git => 'git://github.com/spree/spree_product_groups.git'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
