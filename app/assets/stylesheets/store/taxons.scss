@@ -1,7 +1,77 @@
 @import 'bourbon';
 
-body.taxons, body.products, body.home {
-  &.show, &.index, &.new {
+body.taxons, body.products {
+  &.show, &.index {
+    #content {
+      border: 1px solid #ffacb5;
+      padding: 10px;
+      h2, h3 {
+        color: #CC3366;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-top: 10px;
+        border-top: 1px solid #FFAEB9;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+      .banner {
+        width: 933px;
+        height: 308px;
+        position: relative;
+        border: 1px solid #dfa18e;
+        margin-bottom: 10px;
+        .taxon_title {
+          position: absolute;
+          top: 0;
+          padding: 0;
+          background: white;
+          color: #CC3366;
+          width: 142px;
+          text-align: center;
+          height: 35px;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+      ul#products {
+        li {
+          width: 230px;
+          float: left;
+          margin-right: 5px;
+          .product-image {
+            background: transparent;
+            padding: 5px 5px 0;
+            border: 1px solid #FFAEB9;
+            &:hover {
+              border-color: #CC3366;
+            }
+          }
+          .info {
+            width: 210px;
+            background: #ffacb5;
+            text-align: left;
+            padding: 10px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: #CC3366;
+            margin-top: 5px;
+            a, a:hover {
+              color: #CC3366 !important;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+body.home {
+  &.new {
     #content {
       border: 1px solid #ffacb5;
       padding: 10px;
