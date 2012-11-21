@@ -1,12 +1,25 @@
 @import 'bourbon';
 
-body.taxons {
-  &.show {
+body.taxons, body.products {
+  &.show, &.index {
     #content {
       border: 1px solid #ffacb5;
       padding: 10px;
+      h2, h3 {
+        color: #CC3366;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-top: 10px;
+        border-top: 1px solid #FFAEB9;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
       .banner {
-        width: 942px;
+        width: 933px;
         height: 308px;
         position: relative;
         border: 1px solid #dfa18e;
@@ -26,8 +39,9 @@ body.taxons {
       }
       ul#products {
         li {
-          width: 200px;
+          width: 230px;
           float: left;
+          margin-right: 5px;
           .product-image {
             background: transparent;
             padding: 5px 5px 0;
@@ -37,7 +51,7 @@ body.taxons {
             }
           }
           .info {
-            width: 181px;
+            width: 210px;
             background: #ffacb5;
             text-align: left;
             padding: 10px;

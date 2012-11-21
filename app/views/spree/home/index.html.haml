@@ -40,6 +40,11 @@
       %ul
         - Spree::Taxonomy.where(:name => "Colors").first.root.children.each do |color|
           %li
-            - pg = Spree::ProductGroup.find_by_permalink(color.name.to_url)
-            = link_to color.name #, pg_search_path(:product_group_name => pg.permalink)
+            - pg = Spree::ProductGroup.find_by_name(color.name.to_url)
+            = link_to color.name.titleize, pg_search_path(:product_group_name => pg.permalink)
+            %ul
+              - color.children.each do |sub_color|
+                %li
+                  - pg = Spree::ProductGroup.find_by_name(sub_color.name.to_url)
+                  = link_to sub_color.name.titleize, pg_search_path(:product_group_name => pg.permalink)
 
