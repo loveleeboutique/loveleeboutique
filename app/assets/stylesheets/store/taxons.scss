@@ -1,7 +1,7 @@
 @import 'bourbon';
 
-body.taxons, body.products {
-  &.show, &.index {
+body.taxons, body.products, body.home {
+  &.show, &.index, &.new {
     #content {
       border: 1px solid #ffacb5;
       padding: 10px;

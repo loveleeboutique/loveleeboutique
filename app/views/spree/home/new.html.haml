@@ -1,3 +1,9 @@
+.banner
+  .taxon_title
+    %p New
+  - if @taxon.image.try(:attachment?)
+    = image_tag(@taxon.image.attachment.url(:banner) )
+
 - unless params[:keyword].present?
   %div{"data-hook" => "taxon_children"}
     = render :partial => 'taxon', :collection => @taxon.children
