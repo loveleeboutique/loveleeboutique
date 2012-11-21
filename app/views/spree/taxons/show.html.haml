@@ -4,7 +4,7 @@
   - if @taxon.image.try(:attachment?)
     = image_tag(@taxon.image.attachment.url(:banner) )
 
-- unless @taxon.parent_id.nil?
+- if @taxon.children.empty?
   %div{"data-hook" => "taxon_products"}
     = render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon }
 

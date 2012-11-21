@@ -57,6 +57,10 @@ body.orders.edit {
                       text-align: center;
                       padding-left: 50px;
                     }
+                    &.cart-adjustment-header {
+                      text-align: left;
+                      padding-left: 10px;
+                    }
                   }
                 }
               }
@@ -70,6 +74,7 @@ body.orders.edit {
                       padding: 5px 0;
                       &.cart-item-image {
                         text-align: left;
+                        width: 235px;
                         img {
                           border: 1px solid #ffaeb9;
                           width: 150px;
@@ -93,6 +98,11 @@ body.orders.edit {
                         }
                       }
                     }
+                  }
+                }
+                &#cart_adjustments {
+                  td {
+                    color: #CC3366;
                   }
                 }
               }
@@ -144,6 +154,24 @@ body.orders.edit {
             }
             a {
               margin-left: 10px;
+            }
+          }
+        }
+        #update-cart {
+          .coupon-code-field {
+            margin-top: 10px !important;
+            float: right;
+            margin-right: -87px;
+            color: #CC3366;
+            input {
+              height: 35px;
+            }
+            input[type=submit] {
+              background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+              border: none;
+              width: auto;
+              padding: 0 10px;
+              color: white;
             }
           }
         }

@@ -36,6 +36,20 @@ body.users.show {
         color: #CC3366;
         border-color: #ffaeb9;
       }
+      table {
+        thead {
+          background-color: #e60363;
+          th {
+            color: white;
+          }
+        }
+        tbody {
+          color: #CC3366;
+          tr {
+            border-color: #ffaeb9;
+          }
+        }
+      }
     }
 
   }

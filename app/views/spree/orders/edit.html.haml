@@ -12,10 +12,9 @@
       %div{"data-hook" => "inside_cart_form"}
         %div{"data-hook" => "cart_items"}
           = render :partial => 'form', :locals => { :order_form => order_form }
-        #subtotal.columns.sixteen.alpha.omega{"data-hook" => ""}
+        #subtotal.columns.sixteen.alpha.omega{"data-hook" => "total"}
           %h5
             = t(:subtotal)
-            \:
             %span.order-total= @order.display_total
         .links.columns.sixteen.alpha.omega{"data-hook" => "cart_buttons"}
           = button_tag :class => 'primary', :id => 'update-button' do

@@ -1,0 +1,222 @@
+body.checkout {
+  &.edit, &.update {
+    .container {
+      .row {
+        &#wrapper {
+          #content {
+            #checkout {
+              .row {
+                h1 {
+                  color: #CC3366;
+                }
+                .progress-steps {
+                  li {
+                    color: #CC3366;
+                    &.current, &.current-first {
+                      color: white;
+                      background-color: #ffaeb9;
+                    }
+                    &.completed, &.completed-first {
+                      background-color: white;
+                      a:hover {
+                        color: #CC3366 !important;
+                      }
+                    }
+                  }
+                }
+                form {
+                  .columns {
+                    fieldset {
+                      legend, label {
+                        color: #CC3366;
+                      }
+                    }
+                  }
+                }
+                .form-buttons {
+                  input {
+                    &.button {
+                      background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+                      border: none;
+                      width: auto;
+                      padding: 0 10px;
+                      color: white;
+                      height: 35px;
+                    }
+                  }
+                }
+                #checkout-summary, #shipping_method, #billing, #shipping, #payment, #order_details {
+                  border-color: #ffaeb9;
+                  h3, td, strong, #summary-order-total, legend, label, h6, .address, .delivery, span {
+                    color: #CC3366;
+                  }
+                  hr {
+                    border-color: #ffaeb9;
+                  }
+                  h6 {
+                    border-color: #ffaeb9;
+                  }
+                }
+                table {
+                  &.index {
+                    thead {
+                      background: #e60363;
+                      color: white;
+                      text-align: right;
+                      tr {
+                        th {
+                          padding: 5px 0;
+                          text-align: left;
+                          padding-left: 103px;
+                          &.price, .qty, .total {
+                            text-align: right;
+                          }
+                          &.total {
+                            padding-right: 10px;
+                            span {
+                              color: white !important;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    tbody {
+                      tr {
+                        border-bottom: 1px solid #ffaeb9;
+                        td {
+                          color: #CC3366;
+                          text-align: right;
+                          padding: 5px 0;
+                          font-size: 14px;
+                          img {
+                            border: 1px solid #ffaeb9;
+                            width: 150px;
+                          }
+                          &[data-hook=order_item_image] {
+                            padding-left: 10px;
+                          }
+                          &[data-hook=order_item_description] {
+                            text-align: left;
+                            padding-left: 10px;
+                            h4 {
+                              color: #CC3366;
+                            }
+                          }
+                          &.total {
+                            padding-right: 10px;
+                          }
+                        }
+                      }
+                    }
+                    tfoot {
+                      tr {
+                        &.total {
+                          border-color: #ffaeb9;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.orders {
+  &.show {
+    .container {
+      .row {
+        &#wrapper {
+          #content {
+            #order_summary {
+              border-color: #ffaeb9;
+              h3, td, strong, #summary-order-total, legend, label, h6, .address, .delivery, span {
+                color: #CC3366;
+              }
+              hr {
+                border-color: #ffaeb9;
+              }
+              h6 {
+                border-color: #ffaeb9;
+              }
+            }
+            a.button {
+              background: url('/assets/buttons/add_to_cart.jpg') 0 0 no-repeat;
+              border: none;
+              width: auto;
+              padding: 0 10px;
+              color: white !important;
+              height: 35px;
+              line-height: 35px;
+            }
+            table {
+              &.index {
+                width: 100%;
+                thead {
+                  background: #e60363;
+                  color: white;
+                  text-align: right;
+                  tr {
+                    th {
+                      padding: 5px 0;
+                      text-align: left;
+                      padding-left: 103px;
+                      &.price, .qty, .total {
+                        text-align: right;
+                      }
+                      &.total {
+                        padding-right: 10px;
+                        span {
+                          color: white !important;
+                        }
+                      }
+                    }
+                  }
+                }
+                tbody {
+                  tr {
+                    border-bottom: 1px solid #ffaeb9;
+                    td {
+                      color: #CC3366;
+                      text-align: right;
+                      padding: 5px 0;
+                      font-size: 14px;
+                      img {
+                        border: 1px solid #ffaeb9;
+                        width: 150px;
+                      }
+                      &[data-hook=order_item_image] {
+                        padding-left: 10px;
+                      }
+                      &[data-hook=order_item_description] {
+                        text-align: left;
+                        padding-left: 10px;
+                        h4 {
+                          color: #CC3366;
+                        }
+                      }
+                      &.total {
+                        padding-right: 10px;
+                      }
+                    }
+                  }
+                }
+                tfoot {
+                  tr {
+                    &.total {
+                      border-color: #ffaeb9;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
