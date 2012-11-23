@@ -38,5 +38,20 @@ module Spree
 
       list
     end
+
+    def taxon_preview(taxon, max=4)
+         products = taxon.active_products.limit(max)
+         if (products.size < max) && Spree::Config[:show_descendents]
+           taxon.descendants.each do |taxon|
+             to_get = max - products.length
+             products += taxon.active_products.limit(to_get)
+             products = products.uniq
+             break if products.size >= max
+           end
+         end
+         products
+       end
+
+
   end
 end
