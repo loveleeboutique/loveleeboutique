@@ -89,13 +89,16 @@ body.products {
                   }
                   label {
                     > span {
-                      border: 1px solid #b1b3b6;
+                      border: 1px solid #EF60A3;
                       padding: 5px;
                       width: 45px;
                       @include inline-block;
                       text-align: center;
+                      background: white;
+                      color: #EF60A3;
                       &.selected {
-                        border-color: #FFAEB9;
+                        background: #EF60A3;
+                        color: white;
                       }
                       span {
                         border: none;
