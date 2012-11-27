@@ -1,7 +1,7 @@
 @import 'bourbon';
 
-body.user_sessions, body.user_registrations, body.user_passwords {
-  #existing-customer, #new-customer, #forgot-password {
+body.user_sessions, body.user_registrations, body.user_passwords, body.registration {
+  #existing-customer, #new-customer, #forgot-password, #guest_checkout {
     color: #CC3366;
     h6 {
       color: #CC3366;
@@ -27,6 +27,9 @@ body.user_sessions, body.user_registrations, body.user_passwords {
 }
 
 body.users.show {
+  .row#wrapper {
+    width: 75%;
+  }
   #content {
     h1, h3, p {
       color: #CC3366;

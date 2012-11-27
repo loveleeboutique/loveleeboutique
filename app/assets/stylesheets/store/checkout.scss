@@ -3,6 +3,9 @@ body.checkout {
     .container {
       .row {
         &#wrapper {
+          padding-left: 0;
+          width: 75%;
+          margin-left: 200px;
           #content {
             #checkout {
               .row {
@@ -55,6 +58,11 @@ body.checkout {
                   }
                   h6 {
                     border-color: #ffaeb9;
+                  }
+                  div[data-hook=checkout_payment_step] {
+                    label {
+                      display: none;
+                    }
                   }
                 }
                 table {
@@ -131,6 +139,9 @@ body.orders {
     .container {
       .row {
         &#wrapper {
+          padding-left: 0;
+          margin-left: 200px;
+          width: 75%;
           #content {
             #order_summary {
               border-color: #ffaeb9;

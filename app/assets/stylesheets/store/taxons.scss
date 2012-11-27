@@ -2,6 +2,9 @@
 
 body.taxons, body.products {
   &.show, &.index {
+    .row#wrapper {
+      width: 76%;
+    }
     #content {
       border: 1px solid #ffacb5;
       padding: 10px;
@@ -73,6 +76,9 @@ body.taxons, body.products {
 
 body.home {
   &.new {
+    .row#wrapper {
+      width: 76%;
+    }
     #content {
       border: 1px solid #ffacb5;
       padding: 10px;
