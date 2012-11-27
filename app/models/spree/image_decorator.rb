@@ -9,10 +9,10 @@ module Spree
 
   if Spree::Config[:use_s3]
     s3_creds = {:access_key_id => Spree::Config[:s3_access_key], :secret_access_key => Spree::Config[:s3_secret], :bucket => Spree::Config[:s3_bucket]}
-    Spree::HomepageImage.attachment_definitions[:image][:storage] = :s3
-    Spree::HomepageImage.attachment_definitions[:image][:s3_credentials] = s3_creds
-    Spree::HomepageImage.attachment_definitions[:image][:s3_headers] = ActiveSupport::JSON.decode(Spree::Config[:s3_headers])
-    Spree::HomepageImage.attachment_definitions[:image][:bucket] = Spree::Config[:s3_bucket]
+    Spree::Image.attachment_definitions[:image][:storage] = :s3
+    Spree::Image.attachment_definitions[:image][:s3_credentials] = s3_creds
+    Spree::Image.attachment_definitions[:image][:s3_headers] = ActiveSupport::JSON.decode(Spree::Config[:s3_headers])
+    Spree::Image.attachment_definitions[:image][:bucket] = Spree::Config[:s3_bucket]
   end
 end
 
