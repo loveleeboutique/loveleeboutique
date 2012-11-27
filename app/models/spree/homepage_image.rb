@@ -5,7 +5,7 @@ class Spree::HomepageImage < ActiveRecord::Base
   has_attached_file :image,
                     styles: lambda { |attachment| attachment.instance.image_styles },
                     url: %{/spree/homepage_images/:id/:style/:basename.:extension},
-                    path: %{:rails_root/public/spree/homepage_images/:id/:style/:basename.:extension}
+                    path: %{homepage_images/:id/:style/:basename.:extension}
 
 
   def image_styles
@@ -22,14 +22,13 @@ class Spree::HomepageImage < ActiveRecord::Base
   end
 
 
-  include Spree::Core::S3Support
-  supports_s3 :attachment
-
-  Spree::HomepageImage.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode(Spree::Config[:attachment_styles])
-  Spree::HomepageImage.attachment_definitions[:attachment][:path] = Spree::Config[:attachment_path]
-  Spree::HomepageImage.attachment_definitions[:attachment][:url] = Spree::Config[:attachment_url]
-  Spree::HomepageImage.attachment_definitions[:attachment][:default_url] = Spree::Config[:attachment_default_url]
-  Spree::HomepageImage.attachment_definitions[:attachment][:default_style] = Spree::Config[:attachment_default_style]
+  if Spree::Config[:use_s3]
+    s3_creds = {:access_key_id => Spree::Config[:s3_access_key], :secret_access_key => Spree::Config[:s3_secret], :bucket => Spree::Config[:s3_bucket]}
+    Spree::HomepageImage.attachment_definitions[:image][:storage] = :s3
+    Spree::HomepageImage.attachment_definitions[:image][:s3_credentials] = s3_creds
+    Spree::HomepageImage.attachment_definitions[:image][:s3_headers] = ActiveSupport::JSON.decode(Spree::Config[:s3_headers])
+    Spree::HomepageImage.attachment_definitions[:image][:bucket] = Spree::Config[:s3_bucket]
+  end
 
   # if there are errors from the plugin, then add a more meaningful message
   def no_attachment_errors
