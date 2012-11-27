@@ -1,6 +1,6 @@
 class AddingPrimeColors < ActiveRecord::Migration
   def up
-      color = Spree::OptionType.create(:name => "color-type", :presentation => "Colors")
+      color = Spree::OptionType.find_by_name("color-type")
 
 
     taxon = Spree::Taxon.find_by_name("Blue")
