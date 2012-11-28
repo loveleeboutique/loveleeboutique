@@ -38,9 +38,12 @@ Loveleeboutique::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
   Spree::Core::Engine.routes.append do
-        #   # route globbing for pretty nested taxon and product paths
+    #   # route globbing for pretty nested taxon and product paths
     match '/*id', :to => 'taxons#show', :as => :nested_taxons
-end
+  end
+
+  match '*params', :to => 'spree/base#render_404'
+
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'

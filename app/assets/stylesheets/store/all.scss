@@ -19,3 +19,15 @@
 @import "sessions";
 @import "cart";
 @import "checkout";
+
+.exception_404 {
+  text-align: center;
+  h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
