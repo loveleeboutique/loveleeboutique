@@ -1,6 +1,6 @@
 @import 'bourbon';
 
-body.orders.edit {
+body.orders.edit, body.orders.update {
   .container {
     .row {
       &#wrapper {

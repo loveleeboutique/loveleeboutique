@@ -58,7 +58,7 @@
                   %td{"data-hook" => "order_item_description"}
                     %h4= item.variant.product.name
                     = truncate(item.variant.product.description.html_safe, :length => 100, :omission => "...")
-                    = "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty?
+                    = variant_options(item.variant) unless item.variant .option_values.empty?
                   %td.price{"data-hook" => "order_item_price"}
                     %span= money item.price
                   %td{"data-hook" => "order_item_qty"}= item.quantity
