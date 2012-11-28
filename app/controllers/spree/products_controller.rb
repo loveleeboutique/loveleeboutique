@@ -12,7 +12,7 @@ module Spree
       #@products = Spree::Variant.joins(:option_values).where("spree_option_values.name = 'indigo'").collect(&:product).uniq
 
       @product_group = Spree::ProductGroup.find_by_name(params[:product_group_name])
-      @values = @product_group.product_scopes.select{|x| x.arguments[0] == option_type}.map {|x| x.arguments[1]}.compact
+      @values = @product_group.product_scopes.select{|x| x.arguments[0] == option_type}.map {|x| x.arguments[1]}.compact.sort
       #respond_with(@products)
     end
 

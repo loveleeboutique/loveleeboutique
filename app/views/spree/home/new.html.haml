@@ -6,4 +6,4 @@
 
 - unless params[:keyword].present?
   %div{"data-hook" => "taxon_children"}
-    = render :partial => 'taxon', :collection => @taxon.children
+    = render :partial => 'taxon', :collection => @taxon.children.sort_by(&:name)
