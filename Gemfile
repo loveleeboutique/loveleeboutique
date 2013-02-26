@@ -52,3 +52,4 @@ gem 'spree_usa_epay'
 gem 'spree_skrill'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => "1-1-stable"
+gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping", branch: '1-3-stable'
